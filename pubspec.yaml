@@ -39,6 +39,9 @@ dependencies:
   custom_line_indicator_bottom_navbar: ^0.0.8
   smooth_page_indicator: ^1.1.0
   material_text_fields: ^1.0.3
+  dropdown_button2: ^2.3.7
+  intl: ^0.18.1
+  nil: ^1.1.1
 
 dev_dependencies:
   flutter_test:

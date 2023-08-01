@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom_navbar.dart';
-// import 'package:indexed/indexed.dart';
-// import './../containts/icon_nav.dart';
 import './../widgets/nav-drawer.dart';
 import './../widgets/cappbar.dart';
-// import './../widgets/listviewhome.dart';
-// import './../widgets/bottomnavigation.dart';
 import './homepage.dart';
+import './claim.dart';
 import './splashscreen.dart';
+import './payroll.dart';
+import './profile.dart';
 
 
 class RoutePage extends StatefulWidget {
@@ -22,13 +21,11 @@ class RoutePage extends StatefulWidget {
 class _RoutePageState extends State<RoutePage> {
   int _currentIndex = 0;
   final List<Widget> _widgetList = [
-    // SplashscreenPage(),
     HomePage(),
-    const Text('Page Two'),
+    ClaimPage(),
     const Text('Page Three'),
-    const Text('Page Four'),
-    const Text('Page Five'),
-    const Text('Page Six'),
+    PayrollPage(),
+    ProfilePage(),
   ];
 
   @override
@@ -53,10 +50,10 @@ class _RoutePageState extends State<RoutePage> {
         indicatorType: IndicatorType.Top,
         customBottomBarItems: [
             CustomBottomBarItems(label: 'Home',icon: Icons.home_mini),
-            CustomBottomBarItems(label: 'Home',icon: Icons.note_outlined),
-            CustomBottomBarItems(label: 'Home',icon: Icons.timer_outlined),
-            CustomBottomBarItems(label: 'Home',icon: Icons.money_outlined),
-            CustomBottomBarItems(label: 'Home',icon: Icons.people_outlined),
+            CustomBottomBarItems(label: 'Claim',icon: Icons.note_outlined),
+            CustomBottomBarItems(label: 'Leave',icon: Icons.timer_outlined),
+            CustomBottomBarItems(label: 'Payroll',icon: Icons.money_outlined),
+            CustomBottomBarItems(label: 'Account',icon: Icons.people_outlined),
         ],
     ),
 

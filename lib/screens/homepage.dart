@@ -4,8 +4,6 @@ import '../widgets/responsive.dart';
 
 
 class HomePage extends StatefulWidget {
-  // const HomeBottomPage({Key key, this.title}) : super(key: key);
-  // final String title;
 
   @override
   _HomePage createState() => _HomePage();
@@ -252,7 +250,7 @@ class _HomePage extends State<HomePage> {
             // height: 150.0,
             height: responsive.screenHeight / 5,
             // height: double.infinity,
-            child: ListViewHome(),
+            child: ListViewHome(imageIcon: true, chip: false),
           ),
         ],
       ),
