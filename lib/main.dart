@@ -3,6 +3,7 @@ import './screens/route.dart';
 import './screens/splashscreen.dart';
 import './screens/login.dart';
 import './screens/otp_login.dart';
+import './screens/form/newClaim.dart';
 
 
 void main() {
@@ -20,8 +21,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       // home: RoutePage(title: 'FLutter Demo'),
-      // home: SplashscreenPage(),
       home: SplashscreenPage(),
+      // home: NewClaimPage(),
     );
   }
 }

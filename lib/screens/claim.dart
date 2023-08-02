@@ -4,6 +4,7 @@ import '../widgets/cover.dart';
 // import '../widgets/datepicker.dart';
 import 'package:intl/intl.dart';
 import '../widgets/listviewhome.dart';
+import '../screens/form/newClaim.dart';
 
 class ClaimPage extends StatefulWidget {
   @override
@@ -144,7 +145,13 @@ class _ClaimPageState extends State<ClaimPage> {
                         style: TextStyle(
                           fontSize: 20,
                         )),
-                    onPressed: () {},
+                    onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => NewClaimPage()),
+                          );
+
+                    },
                   ),
                 ),
               ),

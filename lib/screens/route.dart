@@ -7,6 +7,7 @@ import './claim.dart';
 import './splashscreen.dart';
 import './payroll.dart';
 import './profile.dart';
+import './leave.dart';
 
 
 class RoutePage extends StatefulWidget {
@@ -23,7 +24,8 @@ class _RoutePageState extends State<RoutePage> {
   final List<Widget> _widgetList = [
     HomePage(),
     ClaimPage(),
-    const Text('Page Three'),
+    // const Text('Page Three'),
+    LeavePage(),
     PayrollPage(),
     ProfilePage(),
   ];
