@@ -29,7 +29,7 @@ class _PayrollPageState extends State<PayrollPage> {
         children: [
           Cover(),
           Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
                 padding: EdgeInsets.only(right: 30, left: 30),
@@ -37,7 +37,7 @@ class _PayrollPageState extends State<PayrollPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Claim for",
+                      "Payroll for",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
@@ -79,6 +79,9 @@ class _PayrollPageState extends State<PayrollPage> {
                 ),
               ),
 
+                SizedBox(height: 40),
+
+
               // Not Found API
               // Image(
               //   image: AssetImage("assets/images/empty.png"),
@@ -99,31 +102,6 @@ class _PayrollPageState extends State<PayrollPage> {
 
                     ),
                     child: Container(margin: EdgeInsets.only(top: 12), child: ListViewHome(imageIcon: false, chip: true)),
-                ),
-              ),
-
-              Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  margin: EdgeInsets.only(bottom: 30, right: 30),
-                  width: responsive.screenWidth / 2,
-                  child: ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.green, // background
-                      onPrimary: Colors.white, // foreground
-                      minimumSize: const Size.fromHeight(50),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0)),
-                      elevation: 5,
-                      shadowColor: Colors.green,
-                    ),
-                    icon: Icon(Icons.add),
-                    label: Text("Apply Leave",
-                        style: TextStyle(
-                          fontSize: 20,
-                        )),
-                    onPressed: () {},
-                  ),
                 ),
               ),
             ],
