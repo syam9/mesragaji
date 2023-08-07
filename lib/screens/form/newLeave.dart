@@ -8,31 +8,30 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
-class NewClaimPage extends StatefulWidget {
+class NewLeavePage extends StatefulWidget {
   @override
-  _NewClaimPageState createState() => _NewClaimPageState();
+  _NewLeavePageState createState() => _NewLeavePageState();
 }
 
-class _NewClaimPageState extends State<NewClaimPage> {
-  final _categoryController = TextEditingController();
-  final _dateController = TextEditingController();
-  final _amountController = TextEditingController();
-  final _noteController = TextEditingController();
+class _NewLeavePageState extends State<NewLeavePage> {
+  final _fromdateController = TextEditingController();
+  final _todateController = TextEditingController();
+  final _typeleaveController = TextEditingController();
+  final _reasonController = TextEditingController();
 
   @override
   void dispose() {
-    _categoryController.dispose();
-    _dateController.dispose();
-    _amountController.dispose();
-    _noteController.dispose();
+    _fromdateController.dispose();
+    _todateController.dispose();
+    _typeleaveController.dispose();
+    _reasonController.dispose();
     super.dispose();
   }
 
-  // final TextEditingController _categoryController;
-  var selectedValue = "Food";
+  var selectedValue = "Annual Leave";
   var items = [
-    "Food",
-    "Eat",
+    "Annual Leave",
+    "Unpaid Leave",
   ];
 
   File? _image;
@@ -45,7 +44,8 @@ class _NewClaimPageState extends State<NewClaimPage> {
   void initState() {
     super.initState();
     formattedDate = DateFormat('d-MMM-yy').format(date);
-    _dateController.text = "$formattedDate";
+    _fromdateController.text = "";
+    _todateController.text = "";
   }
 
   Future<void> _openImagePicker() async {
@@ -54,6 +54,7 @@ class _NewClaimPageState extends State<NewClaimPage> {
     if (pickedImage != null) {
       setState(() {
         _image = File(pickedImage.path);
+        print(_image);
       });
     }
   }
@@ -65,7 +66,7 @@ class _NewClaimPageState extends State<NewClaimPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: const Text('Create New Claim'),
+        title: const Text('Apply Leave'),
       ),
       body: Container(
         child: Stack(
@@ -95,13 +96,116 @@ class _NewClaimPageState extends State<NewClaimPage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Select Category",
+                        Text("From",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w500)),
+                        SizedBox(height: 10),
+                        TextField(
+                            controller: _fromdateController,
+                            readOnly: true,
+                            onTap: () async {
+                                  await showDatePicker(
+                                    context: context,
+                                    initialDate: DateTime.now(),
+                                    firstDate: DateTime(2022),
+                                    lastDate: DateTime(2030),
+                                  ).then((selectedDate) {
+                                    if (selectedDate != null) {
+                                      setState(() {
+                                        date = selectedDate;
+                                        _fromdateController.text = DateFormat('d-MMM-yy').format(selectedDate);
+                                        print(_fromdateController.text);
+                                      });
+                                    }
+                                  });
+                            },
+                            decoration: InputDecoration(
+                              filled: true,
+                              isDense: true,
+                              fillColor: Colors.grey.withOpacity(0.1),
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+
+                              ),
+                              suffixIcon: Icon(Icons.arrow_forward_ios),
+                              labelStyle: TextStyle(color: Colors.grey),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              disabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20.0),
+                            ),
+                        ),
+                        SizedBox(height: 20),
+                        Text("To",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w500)),
+                        SizedBox(height: 10),
+                        TextField(
+                            controller: _todateController,
+                            readOnly: true,
+                            onTap: () async {
+                                  await showDatePicker(
+                                    context: context,
+                                    initialDate: DateTime.now(),
+                                    firstDate: DateTime(2022),
+                                    lastDate: DateTime(2030),
+                                  ).then((selectedDate) {
+                                    if (selectedDate != null) {
+                                      setState(() {
+                                        date = selectedDate;
+                                        _todateController.text = DateFormat('d-MMM-yy').format(selectedDate);
+                                        print(_todateController.text);
+                                      });
+                                    }
+                                  });
+                            },
+                            decoration: InputDecoration(
+                              filled: true,
+                              isDense: true,
+                              fillColor: Colors.grey.withOpacity(0.1),
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+
+                              ),
+                              suffixIcon: Icon(Icons.arrow_forward_ios),
+                              labelStyle: TextStyle(color: Colors.grey),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              disabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20.0),
+                            ),
+                        ),
+
+
+
+                        SizedBox(height: 20),
+                        Text("Select Leave Type",
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w500)),
                         SizedBox(height: 10),
                         DropdownButtonHideUnderline(
                           child: TextField(
-                            controller: _categoryController,
+                            controller: _typeleaveController,
                             decoration: InputDecoration(
                               filled: true,
                               contentPadding: EdgeInsets.only(
@@ -141,73 +245,12 @@ class _NewClaimPageState extends State<NewClaimPage> {
                           ),
                         ),
                         SizedBox(height: 20),
-                        Text("Date",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500)),
-                        SizedBox(height: 10),
-                        TextField(
-                            controller: _dateController,
-                            readOnly: true,
-                            onTap: () async {
-                                  await showDatePicker(
-                                    context: context,
-                                    initialDate: DateTime.now(),
-                                    firstDate: DateTime(2022),
-                                    lastDate: DateTime(2030),
-                                  ).then((selectedDate) {
-                                    if (selectedDate != null) {
-                                      setState(() {
-                                        date = selectedDate;
-                                        _dateController.text = DateFormat('d-MMM-yy').format(selectedDate);
-                                        print(_dateController.text);
-                                      });
-                                    }
-                                  });
-                            },
-                            decoration: InputDecoration(
-                              filled: true,
-                              isDense: true,
-                              fillColor: Colors.grey.withOpacity(0.1),
-                              border: OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(15.0),
-
-                              ),
-                              suffixIcon: Icon(Icons.arrow_forward_ios),
-                              labelStyle: TextStyle(color: Colors.grey),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              disabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide.none,
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20.0),
-                            ),
-                        ),
-
-
-
-                        SizedBox(height: 20),
-                        Text("Amount (RM)",
+                        Text("Reason",
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w500)),
                         SizedBox(height: 10),
                         MyTextField(
-                          myController: _amountController,
-                        ),
-                        SizedBox(height: 20),
-                        Text("Notes",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500)),
-                        SizedBox(height: 10),
-                        MyTextField(
-                          myController: _noteController,
+                          myController: _reasonController,
                         ),
                         SizedBox(height: 20),
                         Text("Attachment",
@@ -266,7 +309,7 @@ class _NewClaimPageState extends State<NewClaimPage> {
         shadowColor: Colors.green,
       ),
       onPressed: () {
-        print(_noteController);
+        print(_reasonController);
         // Navigator.push(
         //   context,
         //   MaterialPageRoute(builder: (context) {

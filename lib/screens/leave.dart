@@ -3,6 +3,9 @@ import 'package:table_calendar/table_calendar.dart';
 import '../widgets/responsive.dart';
 import '../widgets/cover.dart';
 import '../widgets/calendar.dart';
+import '../screens/form/newLeave.dart';
+
+
 
 class LeavePage extends StatefulWidget {
   @override
@@ -58,7 +61,12 @@ class _LeavePageState extends State<LeavePage> {
                         style: TextStyle(
                           fontSize: 20,
                         )),
-                    onPressed: () {},
+                    onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => NewLeavePage()),
+                        );
+                    },
                   ),
                 ),
               ),
