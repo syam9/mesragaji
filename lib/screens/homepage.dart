@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/listviewhome.dart';
 import '../widgets/responsive.dart';
+import '../containts/themes.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -23,7 +24,7 @@ class _HomePage extends State<HomePage> {
                 height: responsive.screenHeight / 4.0,
                 width: responsive.screenWidth,
                 decoration: const BoxDecoration(
-                  color: Colors.green,
+                  color: colorTheme.primary,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20),
@@ -66,7 +67,7 @@ class _HomePage extends State<HomePage> {
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.5),
+                          color: colorTheme.black.withOpacity(0.5),
                           offset: const Offset(0.5, 0.0),
                           blurRadius: 0.5,
                           spreadRadius: 0.5,
@@ -137,7 +138,7 @@ class _HomePage extends State<HomePage> {
                                 children: <Widget>[
                                   Text("Check In",
                                       style: TextStyle(
-                                          fontSize: 18, color: Colors.black)),
+                                          fontSize: 18, color: colorTheme.black)),
                                   SizedBox(height: 10),
                                   Container(
                                     // height: 40.0,
@@ -146,14 +147,14 @@ class _HomePage extends State<HomePage> {
                                     width: responsive.screenWidth / 2.8,
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
-                                      color: Colors.green.withOpacity(0.1),
+                                      color: colorTheme.primary.withOpacity(0.1),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(15.0),
                                       ),
                                     ),
                                     child: Text("09:30 AM",
                                         style: TextStyle(
-                                            color: Colors.green,
+                                            color: colorTheme.primary,
                                             fontSize: 18,
                                             fontWeight: FontWeight.w500)),
                                   ),
@@ -164,7 +165,7 @@ class _HomePage extends State<HomePage> {
                                 children: <Widget>[
                                   Text("Check Out",
                                       style: TextStyle(
-                                          fontSize: 18, color: Colors.black)),
+                                          fontSize: 18, color: colorTheme.black)),
                                   SizedBox(height: 10),
                                   Container(
                                     // height: 40.0,
@@ -190,17 +191,17 @@ class _HomePage extends State<HomePage> {
                           SizedBox(height: 10),
                           Text("Last Check In: Mon, 24 July 2023, 9.30 AM",
                               style:
-                                  TextStyle(fontSize: 15, color: Colors.black)),
+                                  TextStyle(fontSize: 15, color: colorTheme.black)),
                           SizedBox(height: 30),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.green, // background
+                              primary: colorTheme.primary, // background
                               onPrimary: Colors.white, // foreground
                               minimumSize: const Size.fromHeight(50),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12.0)),
                               elevation: 5,
-                              shadowColor: Colors.green,
+                              shadowColor: colorTheme.primary,
                             ),
                             onPressed: () {},
                             child: Text("CHECK-OUT",
@@ -225,12 +226,12 @@ class _HomePage extends State<HomePage> {
                   padding: const EdgeInsets.all(8),
                   child: Icon(
                     Icons.work_outline,
-                    color: Colors.green,
+                    color: colorTheme.primary,
                     size: 20.0,
                     semanticLabel: 'Text to announce in accessibility modes',
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.green.withOpacity(0.2),
+                    color: colorTheme.primary.withOpacity(0.2),
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),

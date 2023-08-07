@@ -4,6 +4,9 @@ import 'package:material_text_fields/material_text_fields.dart';
 import '../widgets/responsive.dart';
 import 'package:indexed/indexed.dart';
 import '../screens/route.dart';
+import '../containts/themes.dart';
+
+
 
 class OtpLoginPage extends StatefulWidget {
   @override
@@ -74,7 +77,7 @@ class _OtpLoginPageState extends State<OtpLoginPage> {
                           dotHeight: 12,
                           dotWidth: 12,
                           dotColor: Colors.grey.shade300.withOpacity(0.8),
-                          activeDotColor: Colors.green,
+                          activeDotColor: colorTheme.primary,
                         ),
                       ),
                     ),
@@ -180,7 +183,7 @@ class _OtpLoginPageState extends State<OtpLoginPage> {
                           },
                           child: Align(
                             alignment: Alignment.centerRight,
-                            child: Text("RESEND", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.green, fontSize: 18,)),
+                            child: Text("RESEND", style: TextStyle(fontWeight: FontWeight.w500, color: colorTheme.primary, fontSize: 18,)),
                           ),
                       ),
 
@@ -199,7 +202,7 @@ class _OtpLoginPageState extends State<OtpLoginPage> {
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(12.0)),
                                       elevation: 0,
-                                      shadowColor: Colors.green,
+                                      shadowColor: colorTheme.primary,
                                     ),
                                     onPressed: () {},
                                     child: Text("CANCEL",
@@ -217,13 +220,13 @@ class _OtpLoginPageState extends State<OtpLoginPage> {
                                 flex: 2,
                                 child:ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      primary: Colors.green, // background
+                                      primary: colorTheme.primary, // background
                                       onPrimary: Colors.white, // foreground
                                       minimumSize: const Size.fromHeight(50),
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(12.0)),
                                       elevation: 5,
-                                      shadowColor: Colors.green,
+                                      shadowColor: colorTheme.primary,
                                     ),
                                     onPressed: () {
                                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => RoutePage()));
@@ -251,7 +254,7 @@ class _OtpLoginPageState extends State<OtpLoginPage> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 18,
-                                  color: Colors.green)),
+                                  color: colorTheme.primary)),
                         ),
                       ),
                       SizedBox(height: 20),

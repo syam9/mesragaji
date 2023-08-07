@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import '../widgets/responsive.dart';
+import '../containts/themes.dart';
 
 class Cover extends StatelessWidget {
 
@@ -14,7 +15,7 @@ class Cover extends StatelessWidget {
         margin: EdgeInsets.only(top: 0.1),
         height: responsive.screenHeight / 10,
         decoration: const BoxDecoration(
-          color: Colors.green,
+          color: colorTheme.primary,
         ),
         child: Transform.scale(
           scale: 10,
@@ -22,7 +23,7 @@ class Cover extends StatelessWidget {
             width: responsive.screenWidth,
             padding: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
-                color: Colors.green,
+                color: colorTheme.primary,
                 shape: BoxShape.circle,
             ),
             child: const Text('Bad Idea Bears'),

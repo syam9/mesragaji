@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/responsive.dart';
 import '../widgets/cover.dart';
+import '../containts/themes.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
+                        color: colorTheme.black.withOpacity(0.1),
                         blurRadius: 10.0,
                       ),
                     ],
@@ -68,7 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         boxShadow: [
                           BoxShadow(
                               blurRadius: 3,
-                              color: Colors.black.withOpacity(0.1),
+                              color: colorTheme.black.withOpacity(0.1),
                               spreadRadius: 3)
                         ],
                       ),
@@ -82,7 +83,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w500)),
                             Divider(
-                              color: Colors.green,
+                              color: colorTheme.primary,
                               thickness: 4,
                               indent: 0,
                               endIndent: 280,
@@ -123,7 +124,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         boxShadow: [
                           BoxShadow(
                               blurRadius: 3,
-                              color: Colors.black.withOpacity(0.1),
+                              color: colorTheme.black.withOpacity(0.1),
                               spreadRadius: 3)
                         ],
                       ),
@@ -137,7 +138,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w500)),
                             Divider(
-                              color: Colors.green,
+                              color: colorTheme.primary,
                               thickness: 4,
                               indent: 0,
                               endIndent: 280,
@@ -179,13 +180,13 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.green, // background
+                          primary: colorTheme.primary, // background
                           onPrimary: Colors.white, // foreground
                           minimumSize: const Size.fromHeight(50),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12.0)),
                           elevation: 5,
-                          shadowColor: Colors.green,
+                          shadowColor: colorTheme.primary,
                         ),
                         onPressed: () {},
                         child: Text("LOG OUT",

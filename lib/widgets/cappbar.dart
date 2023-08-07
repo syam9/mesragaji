@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import './nav-drawer.dart';
+import '../containts/themes.dart';
 
 AppBar customAppBar(){
     return AppBar(
-        backgroundColor: Colors.green,  
+        backgroundColor: colorTheme.primary,  
         centerTitle: true,
         titleSpacing: 30.0,
         elevation: 0.0,

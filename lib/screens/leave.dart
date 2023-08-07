@@ -4,6 +4,7 @@ import '../widgets/responsive.dart';
 import '../widgets/cover.dart';
 import '../widgets/calendar.dart';
 import '../screens/form/newLeave.dart';
+import '../containts/themes.dart';
 
 
 
@@ -48,13 +49,13 @@ class _LeavePageState extends State<LeavePage> {
                   width: responsive.screenWidth / 2,
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.green, // background
+                      primary: colorTheme.primary, // background
                       onPrimary: Colors.white, // foreground
                       minimumSize: const Size.fromHeight(50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)),
                       elevation: 5,
-                      shadowColor: Colors.green,
+                      shadowColor: colorTheme.primary,
                     ),
                     icon: Icon(Icons.add),
                     label: Text("Apply Leave",

@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:dropdown_button2/dropdown_button2.dart';
+import '../containts/themes.dart';
 
 class DropdownPage extends StatelessWidget {
 
@@ -75,7 +76,7 @@ Widget build(BuildContext context) {
               iconStyleData: const IconStyleData(
                 icon: Icon(
                   Icons.arrow_drop_down,
-                  color: Colors.black45,
+                  color: colorTheme.black,
                 ),
                 iconSize: 24,
               ),

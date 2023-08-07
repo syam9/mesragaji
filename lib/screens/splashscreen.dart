@@ -3,6 +3,7 @@ import 'dart:async';
 // import '../screens/homepage.dart';
 import '../screens/route.dart';
 import '../screens/login.dart';
+import '../containts/themes.dart';
 
 
 class SplashscreenPage extends StatefulWidget{
@@ -35,7 +36,7 @@ class _SplashscreenPageState extends State<SplashscreenPage>{
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFF00A650), Color(0xFF98F06E)])),
+              colors: [colorTheme.primary, colorTheme.secondary])),
       child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Center(

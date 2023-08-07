@@ -7,6 +7,8 @@ import '../../widgets/register-form.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
+import '../../containts/themes.dart';
+
 
 class NewClaimPage extends StatefulWidget {
   @override
@@ -84,7 +86,7 @@ class _NewClaimPageState extends State<NewClaimPage> {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.2),
+                          color: colorTheme.black.withOpacity(0.2),
                           offset: const Offset(0.5, 0.0),
                           blurRadius: 10,
                           spreadRadius: 0.5,
@@ -236,7 +238,7 @@ class _NewClaimPageState extends State<NewClaimPage> {
                         const SizedBox(height: 50.0),
                         Container(
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: colorTheme.primary,
                             borderRadius: BorderRadius.circular(20),
                           ),
                           width: responsive.screenWidth,
@@ -258,12 +260,12 @@ class _NewClaimPageState extends State<NewClaimPage> {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
         minimumSize: Size(200, 50),
-        primary: Colors.green,
+        primary: colorTheme.primary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
         ),
         // elevation: 5,
-        shadowColor: Colors.green,
+        shadowColor: colorTheme.primary,
       ),
       onPressed: () {
         print(_noteController);

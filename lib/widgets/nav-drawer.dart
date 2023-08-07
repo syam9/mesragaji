@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../containts/themes.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class NavDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 25),
             ),
             decoration: BoxDecoration(
-                color: Colors.green,
+                color: colorTheme.primary,
                 image: DecorationImage(
                     fit: BoxFit.fill,
                     image: AssetImage('assets/images/cover.jpg'))),

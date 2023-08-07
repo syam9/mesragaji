@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nil/nil.dart';
+import '../containts/themes.dart';
 
 class ListViewHome extends StatelessWidget {
   final titles = ["Report", "Site Visit", "SITREP"];
@@ -26,7 +27,7 @@ class ListViewHome extends StatelessWidget {
             child: Card(
               elevation: 8,
               color: Colors.white,
-              shadowColor: Colors.black.withOpacity(0.3),
+              shadowColor: colorTheme.black.withOpacity(0.3),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -41,7 +42,7 @@ class ListViewHome extends StatelessWidget {
                           padding: const EdgeInsets.all(15),
                           child: Icon(
                             Icons.work_outline,
-                            color: Colors.black,
+                            color: colorTheme.black,
                             size: 34.0,
                             semanticLabel:
                                 'Text to announce in accessibility modes',
@@ -78,11 +79,11 @@ class ListViewHome extends StatelessWidget {
                         Text("General Report/Logbook",
                             style: TextStyle(
                                 fontSize: 15,
-                                color: Colors.black.withOpacity(0.3))),
+                                color: colorTheme.black.withOpacity(0.3))),
 
                         chip?
                           Chip(
-                              backgroundColor: Colors.green,
+                              backgroundColor: colorTheme.primary,
                               label: Text("Complate",style: TextStyle(color: Colors.white, fontSize: 15)),
                           )
                         : Container(),

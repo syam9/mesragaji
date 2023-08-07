@@ -5,6 +5,7 @@ import '../widgets/cover.dart';
 import 'package:intl/intl.dart';
 import '../widgets/listviewhome.dart';
 import '../screens/form/newClaim.dart';
+import '../containts/themes.dart';
 
 class ClaimPage extends StatefulWidget {
   @override
@@ -132,13 +133,13 @@ class _ClaimPageState extends State<ClaimPage> {
                   width: responsive.screenWidth / 1.7,
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.green, // background
+                      primary: colorTheme.primary, // background
                       onPrimary: Colors.white, // foreground
                       minimumSize: const Size.fromHeight(50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)),
                       elevation: 5,
-                      shadowColor: Colors.green,
+                      shadowColor: colorTheme.primary,
                     ),
                     icon: Icon(Icons.add),
                     label: Text("Create New Claim",

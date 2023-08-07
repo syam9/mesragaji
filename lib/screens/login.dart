@@ -4,6 +4,7 @@ import 'package:material_text_fields/material_text_fields.dart';
 import '../widgets/responsive.dart';
 import 'package:indexed/indexed.dart';
 import '../screens/otp_login.dart';
+import '../containts/themes.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -75,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                           dotHeight: 12,
                           dotWidth: 12,
                           dotColor: Colors.grey.shade300.withOpacity(0.8),
-                          activeDotColor: Colors.green,
+                          activeDotColor: colorTheme.primary,
                         ),
                       ),
                     ),
@@ -141,13 +142,13 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: 20),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.green, // background
+                          primary: colorTheme.primary, // background
                           onPrimary: Colors.white, // foreground
                           minimumSize: const Size.fromHeight(50),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12.0)),
                           elevation: 5,
-                          shadowColor: Colors.green,
+                          shadowColor: colorTheme.primary,
                         ),
                         onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => OtpLoginPage()));
@@ -170,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 18,
-                                  color: Colors.green)),
+                                  color: colorTheme.primary)),
                         ),
                       ),
                     ],

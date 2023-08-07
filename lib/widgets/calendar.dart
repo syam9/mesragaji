@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import '../containts/utils.dart';
+import '../containts/themes.dart';
 import '../widgets/listviewhome.dart';
+
 
 class TableEventsExample extends StatefulWidget {
   @override
@@ -92,7 +94,7 @@ class _TableEventsExampleState extends State<TableEventsExample> {
             borderRadius: BorderRadius.circular(30),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
+                color: colorTheme.black.withOpacity(0.1),
                 offset: Offset(0.5, 0),
                 blurRadius: 10,
                 spreadRadius: 1,
@@ -141,7 +143,7 @@ class _TableEventsExampleState extends State<TableEventsExample> {
                     child: Card(
                       elevation: 8,
                       color: Colors.white,
-                      shadowColor: Colors.black.withOpacity(0.3),
+                      shadowColor: colorTheme.black.withOpacity(0.3),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -180,9 +182,9 @@ class _TableEventsExampleState extends State<TableEventsExample> {
                                 Text("General Report/Logbook",
                                     style: TextStyle(
                                         fontSize: 15,
-                                        color: Colors.black.withOpacity(0.3))),
+                                        color: colorTheme.black.withOpacity(0.3))),
                                 Chip(
-                                  backgroundColor: Colors.green,
+                                  backgroundColor: colorTheme.primary,
                                   label: Text("Approve",
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 15)),

@@ -8,6 +8,7 @@ import './splashscreen.dart';
 import './payroll.dart';
 import './profile.dart';
 import './leave.dart';
+import '../containts/themes.dart';
 
 
 class RoutePage extends StatefulWidget {
@@ -38,7 +39,7 @@ class _RoutePageState extends State<RoutePage> {
       body: Center(child: _widgetList[_currentIndex]),
 
     bottomNavigationBar: CustomLineIndicatorBottomNavbar(
-        selectedColor: Colors.green,
+        selectedColor: colorTheme.secondary,
         unSelectedColor: Colors.white,
         backgroundColor: Color(0xFF343434),
         currentIndex: _currentIndex,
