@@ -42,7 +42,7 @@ class _SplashscreenPageState extends State<SplashscreenPage>{
           body: Center(
             child: Container(
               width: 230.0,
-              child: Image.asset("assets/images/white-mesragaji.png"),
+              child: Image.asset("assets/images/original.png"),
             ),
           )),
     );

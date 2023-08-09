@@ -67,6 +67,7 @@ class _NewClaimPageState extends State<NewClaimPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        backgroundColor: colorTheme.primary,
         title: const Text('Create New Claim'),
       ),
       body: Container(

@@ -231,7 +231,7 @@ class _HomePage extends State<HomePage> {
                     semanticLabel: 'Text to announce in accessibility modes',
                   ),
                   decoration: BoxDecoration(
-                    color: colorTheme.primary.withOpacity(0.2),
+                    color: colorTheme.primary.withOpacity(0.1),
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),

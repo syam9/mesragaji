@@ -21,9 +21,9 @@ class _ProfilePageState extends State<ProfilePage> {
             Column(
               children: [
                 Container(
-                  height: 50,
+                  height: 60,
                   child: Image(
-                    image: AssetImage("assets/images/white-mesragaji.png"),
+                    image: AssetImage("assets/images/original.png"),
                   ),
                 ),
                 SizedBox(height: 50),

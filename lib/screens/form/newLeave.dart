@@ -66,6 +66,7 @@ class _NewLeavePageState extends State<NewLeavePage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: colorTheme.primary,
         elevation: 0,
         title: const Text('Apply Leave'),
       ),
