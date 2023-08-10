@@ -27,6 +27,7 @@ class _LeavePageState extends State<LeavePage> {
               Cover(),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
+                height: responsive.screenHeight,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -54,7 +55,8 @@ class _LeavePageState extends State<LeavePage> {
                               SizedBox(height: 15),
                               Container(
                                 width: responsive.screenWidth,
-                                height: responsive.screenHeight / 1.8,
+                                // height: responsive.screenHeight / 1.8,
+                                padding: EdgeInsets.symmetric(vertical: 20),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
@@ -74,7 +76,7 @@ class _LeavePageState extends State<LeavePage> {
                                   padding: EdgeInsets.symmetric(horizontal: 25),
                                   child: Column(
                                     children: [
-                                      SizedBox(height: 30),
+                                      // SizedBox(height: 30),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,

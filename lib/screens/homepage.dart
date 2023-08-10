@@ -16,7 +16,7 @@ class _HomePage extends State<HomePage> {
     responsive().init(context);
 
     return Scaffold(
-      body: Column(
+      body: SingleChildScrollView(child: Column(
         children: [
           Stack(
             children: <Widget>[
@@ -31,7 +31,8 @@ class _HomePage extends State<HomePage> {
                   ),
                 ),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                height: responsive.screenHeight,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,15 +52,15 @@ class _HomePage extends State<HomePage> {
                   ),
                 ),
               ),
-              Padding(
+              Container(
                 padding: const EdgeInsets.only(top: 80.0),
                 child: Positioned(
                   right: 0,
                   top: 10,
                   child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 20.0),
-                    height: responsive.screenHeight / 2.3,
-                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 10.0),
+                    // width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: const BorderRadius.all(
@@ -74,9 +75,9 @@ class _HomePage extends State<HomePage> {
                         ),
                       ],
                     ),
-                    child: Padding(
+                    child: Container(
                       padding: const EdgeInsets.all(20),
-                      child: Column(
+                      child: Container(child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("Logged In Duration",
@@ -211,6 +212,7 @@ class _HomePage extends State<HomePage> {
                           ),
                         ],
                       ),
+                      ),
                     ),
                   ),
                 ),
@@ -254,6 +256,7 @@ class _HomePage extends State<HomePage> {
             child: ListViewHome(imageIcon: true, chip: false),
           ),
         ],
+      ),
       ),
     );
   }

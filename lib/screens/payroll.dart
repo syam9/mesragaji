@@ -26,7 +26,7 @@ class _PayrollPageState extends State<PayrollPage> {
     responsive().init(context);
 
     return Scaffold(
-      body: Stack(
+      body: SingleChildScrollView(child: Stack(
         children: [
           Cover(),
           Column(
@@ -219,6 +219,7 @@ class _PayrollPageState extends State<PayrollPage> {
             ],
           ),
         ],
+      ),
       ),
     );
   }

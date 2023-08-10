@@ -124,7 +124,7 @@ class _ClaimPageState extends State<ClaimPage> {
                   children: [
                     Container(
                       width: responsive.screenWidth / 2.4,
-                      height: responsive.screenHeight / 6,
+                      // height: responsive.screenHeight / 6,
                       decoration: BoxDecoration(
                         color: colorTheme.secondary,
                         borderRadius: BorderRadius.circular(20),
@@ -140,7 +140,7 @@ class _ClaimPageState extends State<ClaimPage> {
                           ),
                         ],
                       ),
-                        child: Padding(
+                        child: Container(
                             padding: EdgeInsets.all(20),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -182,7 +182,7 @@ class _ClaimPageState extends State<ClaimPage> {
                     ),
                     Container(
                       width: responsive.screenWidth / 2.4,
-                      height: responsive.screenHeight / 6,
+                      // height: responsive.screenHeight / 6,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
@@ -198,7 +198,8 @@ class _ClaimPageState extends State<ClaimPage> {
                           ),
                         ],
                       ),
-                        child: Padding(
+                        child: Container(
+                            // height: responsive.screenHeight,
                             padding: EdgeInsets.all(20),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
